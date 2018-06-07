@@ -26,6 +26,8 @@ RUN chmod +x /root/startup.sh
 
 WORKDIR /var/www/seat
 
+ENV DB_HOST=mariadb
+
 CMD ["php-fpm", "-F"]
 
 ENTRYPOINT ["/bin/sh", "/root/startup.sh"]
